@@ -1,0 +1,9 @@
+[wavelog]
+url = "https://log.jo30.de/index.php"
+key = "mykey"
+radio = "WLAgent"
+
+[rigctld]
+enabled = false
+host = "localhost"
+port = 4532
