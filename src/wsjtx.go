@@ -8,13 +8,14 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"sync"
 	"time"
 
 	"github.com/k0swe/wsjtx-go/v4"
 	"gopkg.in/ini.v1"
 )
 
-func wsjtxmain() {
+func wsjtxmain(wg *sync.WaitGroup) {
 	if _, err := os.Stat(os.Getenv("WAVELOG_AGENT_COFNIG")); errors.Is(err, os.ErrNotExist) {
 		if _, err := os.Stat("config.ini"); errors.Is(err, os.ErrNotExist) {
 			log.Fatal("Configuration file not found.")
