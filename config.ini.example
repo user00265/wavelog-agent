@@ -2,6 +2,7 @@
 url = "https://log.jo30.de/index.php"
 key = "mykey"
 radio = "WLAgent"
+profile = "1"
 
 [rigctld]
 enabled = false

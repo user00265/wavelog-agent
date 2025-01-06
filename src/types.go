@@ -1,20 +1,19 @@
 package main
 
-import "fmt"
-
 type AgentRigctlConfig struct {
-    Enabled     bool   `ini:"enabled"`
-    Host        string `ini:"host"`
-    Port        int    `ini:"port"`
+	Enabled bool   `ini:"enabled"`
+	Host    string `ini:"host"`
+	Port    string `ini:"port"`
 }
 
 type AgentWavelogConfig struct {
-	URL         string `ini:"url"`
-	Key         string `ini:"key"`
-	Radio       string `ini:"radio"`
+	URL     string `ini:"url"`
+	Key     string `ini:"key"`
+	Radio   string `ini:"radio"`
+	Profile string `ini:"profile"`
 }
 
 type AgentConfig struct {
-	Rigctl          *AgentRigctlConfig
-	Wavelog         *AgentWavelogConfig
+	Rigctld *AgentRigctlConfig
+	Wavelog *AgentWavelogConfig
 }
